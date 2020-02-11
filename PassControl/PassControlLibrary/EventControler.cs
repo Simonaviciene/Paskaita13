@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PassControlLibrary
 {
-    class EventControler
+    public class EventControler
     {
-        private List<Event> events;
+        public List<Event> events;
         private HumanRepository humanRepository;
 
         public EventControler(HumanRepository humanRepository)
@@ -21,7 +21,13 @@ namespace PassControlLibrary
         {
 
             Human human = humanRepository.Retrieve(humanId);
-            return true;
+            bool hasRight = human.HasRight(gateId);
+            
+            events.Add(new Event(Guid.NewGuid(), humanId, gateId, DateTime.Now, hasRight));
+
+            return hasRight;
+
+
         }
 
     }

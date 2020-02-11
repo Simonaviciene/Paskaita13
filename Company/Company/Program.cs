@@ -18,8 +18,13 @@ namespace Company
             foreach (var phone in company.phoneNumbers)
             {
                 Console.WriteLine("{0}", phone);
+                Console.ReadLine();
             }
            
         }
+        //CompanyRepository companyRepository = new CompanyRepository();
+        //List<Companys> companies = companyRepository.Retrieve();
+
+
     }
 }

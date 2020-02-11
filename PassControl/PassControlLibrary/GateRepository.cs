@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PassControlLibrary
 {
-    class GateRepository
+    public class GateRepository
     {
         private List<Gate> gates;
 

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace PassControlLibrary
 {
-    class Event
+    public class Event
     {
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
         public int HumanId { get; private set; }
         public int GateId { get; private set; }
         public DateTime Date;
         public bool Pass { get; private set; }
 
-        public Event(int id, int humanId, int gateId, DateTime date, bool pass)
+        public Event(Guid id, int humanId, int gateId, DateTime date, bool pass)
         {
             Id = id;
             HumanId = humanId;

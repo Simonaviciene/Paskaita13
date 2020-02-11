@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PassControlLibrary
 {
-    class Gate
+    public class Gate
     {
         public int Id { get; private set; }
         public string Code { get; private set; }
